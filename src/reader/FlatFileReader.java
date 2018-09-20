@@ -82,6 +82,7 @@ public class FlatFileReader {
 	{
 		File file = new File("data/Customers.dat");
 		
+		
 	}
 	
 	//method for reading in Products.dat
