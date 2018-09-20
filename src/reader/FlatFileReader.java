@@ -2,10 +2,11 @@ package reader;
 
 import java.util.*;
 
-import entities.Address;
-import entities.Person;
+import entities.*;
 
 import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class FlatFileReader {
 
@@ -73,6 +74,8 @@ public class FlatFileReader {
 			
 
 		}
+		
+		scanner.close();
 		return arrPersons;
 		
 	}
@@ -80,14 +83,88 @@ public class FlatFileReader {
 	//method for reading in Customers.dat
 	public void readInCustomers()
 	{
-		File file = new File("data/Customers.dat");
+		//File file = new File("data/Customers.dat");
 		
 		
 	}
 	
 	//method for reading in Products.dat
-	public void readInProducts()
+	public ArrayList readInProducts() throws FileNotFoundException, ParseException
 	{
+		//ArrayList for products
+		ArrayList<Product> products = new ArrayList<Product>();
+		//File and scanner objects
 		File file = new File("data/Products.dat");
+		Scanner scanner1 = new Scanner(file);
+		
+		//fiding number of products being read in 
+		int times = scanner1. nextInt();
+
+		//reading in and finding which type of product they are and instantiating them respectivly 
+		while (times > 0)
+		{
+			times--;
+			String readIn = scanner1.nextLine();
+			
+			if (!readIn.isEmpty()) { //prevent empty lines from being read in
+				//tokenize each part of the stuff read in
+				String[] productElements = readIn.split(";");
+
+				//using the product type to instantiate different products
+				//productElements hold all the attributes; however, some need to be converted to be used
+				String type = productElements[1];
+				if (type.equals("S")) //season pass
+				{
+					//converting to dates
+					Date start = new SimpleDateFormat("yyyy-MM-dd").parse(productElements[3]);
+					Date end = new SimpleDateFormat("yyyy-MM-dd").parse(productElements[4]);
+					
+					//instantiate seasonpass object
+					SeasonPass seasonPass = new SeasonPass(productElements[0],productElements[2],start,end,Double.parseDouble(productElements[5]));
+					
+					//add to arraylist
+					products.add(seasonPass);
+				}
+				else if (type.equals("R")) //refreshments 
+				{
+					Refreshments refreshments = new Refreshments(productElements[0],productElements[2],Double.parseDouble(productElements[3]));
+					
+					//add to arraylist
+					products.add(refreshments);
+				}
+				else if (type.equals("M")) //movie tickets
+				{
+					//converting to dates
+					Date movieTime = new SimpleDateFormat("yyyy-MM-dd hh:mm").parse(productElements[2]);
+
+					//Creating the address object
+					String addressText = productElements[4]; //tokenizing the address to make an address object
+					
+					String[] elementsForAddress = addressText.split(","); //splitting up parts for each part of the address (street, city, state, zip, country)
+					
+					//instaniating address object after trimming white space of each element of the address
+					Address address = new Address(elementsForAddress[0].trim(),elementsForAddress[1].trim(),elementsForAddress[2].trim(),(elementsForAddress[3].trim()), elementsForAddress[4].trim());
+					
+					//instantiating movieTicket object
+					MovieTicket movieTicket = new MovieTicket(productElements[0],movieTime,productElements[3],address,productElements[5],Double.parseDouble(productElements[6]));
+					
+					//adding to arrayList
+					products.add(movieTicket);
+				}
+				else if (type.equals("P")) //parking pass
+				{
+					//instatiating parking pass class
+					ParkingPass parkingPass = new ParkingPass(productElements[0],Double.parseDouble(productElements[2]));
+					
+					//adding to arraylist
+					products.add(parkingPass);
+				}
+
+			}
+			
+		}
+		
+		scanner1.close();
+		return products; 
 	}
 }

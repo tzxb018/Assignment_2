@@ -4,11 +4,12 @@ import entities.*;
 import reader.*;
 
 import java.io.FileNotFoundException;
+import java.text.ParseException;
 import java.util.*;
 
 public class DataConverter {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws FileNotFoundException, ParseException {
 		// TODO Auto-generated method stub
 		
 		//Create a FileReader object
@@ -21,6 +22,8 @@ public class DataConverter {
 		{
 			System.out.println(arr.get(i).toString());
 		}
+		
+		ffr.readInProducts();
 	}
 
 }
