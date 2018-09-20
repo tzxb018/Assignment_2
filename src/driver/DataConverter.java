@@ -22,7 +22,8 @@ public class DataConverter {
 		
 		JSONWriter jsonWriter = new JSONWriter();
 		jsonWriter.jsonProductConverter(arrProducts);
-		
+		XMLWriter xmlWriter = new XMLWriter();
+		xmlWriter.XMLProductWriter(arrProducts);
 	}
 
 }

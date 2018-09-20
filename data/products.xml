@@ -1,0 +1,75 @@
+<Season__Pass>
+  <code>b29e</code>
+  <name>Winter Special</name>
+  <start>2016-12-13 06:00:00.0 UTC</start>
+  <end>2017-01-07 06:00:00.0 UTC</end>
+  <cost>120.0</cost>
+</Season__Pass><Refreshments>
+  <code>ff23</code>
+  <name>Labatt Beer-20oz</name>
+  <cost>4.99</cost>
+</Refreshments><Movie__Ticket>
+  <code>fp12</code>
+  <movieDate>2016-10-21 18:10:00.0 UTC</movieDate>
+  <movieName>A Monster Calls</movieName>
+  <location>
+    <street>3555 South 140th Plaza</street>
+    <city>Omaha</city>
+    <state>NE</state>
+    <zipcode>68144</zipcode>
+    <country>USA</country>
+  </location>
+  <theatreLoc>2A</theatreLoc>
+  <pricePerUnit>21.5</pricePerUnit>
+</Movie__Ticket><Parking__Pass>
+  <code>90fa</code>
+  <cost>25.0</cost>
+</Parking__Pass><Movie__Ticket>
+  <code>1239</code>
+  <movieDate>2016-09-13 20:30:00.0 UTC</movieDate>
+  <movieName>The Wild Life</movieName>
+  <location>
+    <street>755 Willard Drive</street>
+    <city>Ashwaubenon</city>
+    <state>WI</state>
+    <zipcode>54304</zipcode>
+    <country>USA</country>
+  </location>
+  <theatreLoc>12F</theatreLoc>
+  <pricePerUnit>11.0</pricePerUnit>
+</Movie__Ticket><Movie__Ticket>
+  <code>782g</code>
+  <movieDate>2016-11-10 16:00:00.0 UTC</movieDate>
+  <movieName>Shut In</movieName>
+  <location>
+    <street>6301 University Ave</street>
+    <city>Cedar Falls</city>
+    <state>IA</state>
+    <zipcode>50613</zipcode>
+    <country>USA</country>
+  </location>
+  <theatreLoc>32D</theatreLoc>
+  <pricePerUnit>25.0</pricePerUnit>
+</Movie__Ticket><Parking__Pass>
+  <code>3289</code>
+  <cost>55.0</cost>
+</Parking__Pass><Refreshments>
+  <code>32f4</code>
+  <name>Caramel Popcorn</name>
+  <cost>5.5</cost>
+</Refreshments><Season__Pass>
+  <code>3y92</code>
+  <name>BlackFriday Deal</name>
+  <start>2016-11-24 06:00:00.0 UTC</start>
+  <end>2016-11-29 06:00:00.0 UTC</end>
+  <cost>58.0</cost>
+</Season__Pass><Parking__Pass>
+  <code>90fb</code>
+  <cost>20.0</cost>
+</Parking__Pass><Season__Pass>
+  <code>xer4</code>
+  <name>FiveWeeks-Unlimited</name>
+  <start>2016-10-07 05:00:00.0 UTC</start>
+  <end>2016-11-11 06:00:00.0 UTC</end>
+  <cost>185.0</cost>
+</Season__Pass>
