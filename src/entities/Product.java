@@ -10,7 +10,7 @@ public class Product {
 		this.code = code;
 	}
 	
-	//gettter and setter methods for superclass (shared with each subclass)
+	//getter and setter methods for superclass (shared with each subclass)
 	public String getCode() {
 		return code;
 	}
