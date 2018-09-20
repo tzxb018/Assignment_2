@@ -28,8 +28,11 @@ public class Refreshments extends Product {
 	public void setCost(double cost) {
 		this.cost = cost;
 	}
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Refreshments [name=" + name + ", cost=" + cost + ", getName()=" + getName() + ", getCost()=" + getCost()
+				+ ", getCode()=" + getCode() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
+	}
 }

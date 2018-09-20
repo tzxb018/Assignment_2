@@ -62,8 +62,15 @@ public class MovieTicket extends Product{
 		this.pricePerUnit = pricePerUnit;
 	}
 
-	
-	
+	@Override
+	public String toString() {
+		return "MovieTicket [movieDate=" + movieDate + ", movieName=" + movieName + ", location=" + location
+				+ ", theatreLoc=" + theatreLoc + ", pricePerUnit=" + pricePerUnit + ", getMovieDate()=" + getMovieDate()
+				+ ", getMovieName()=" + getMovieName() + ", getLocation()=" + getLocation() + ", getTheatreLoc()="
+				+ getTheatreLoc() + ", getPricePerUnit()=" + getPricePerUnit() + ", getCode()=" + getCode()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
 	
 	
 }

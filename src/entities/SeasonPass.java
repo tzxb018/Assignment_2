@@ -49,8 +49,12 @@ public class SeasonPass extends Product {
 	public void setCost(double cost) {
 		this.cost = cost;
 	}
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "SeasonPass [name=" + name + ", start=" + start + ", end=" + end + ", cost=" + cost + ", getName()="
+				+ getName() + ", getStart()=" + getStart() + ", getEnd()=" + getEnd() + ", getCost()=" + getCost()
+				+ ", getCode()=" + getCode() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
+	}
 }

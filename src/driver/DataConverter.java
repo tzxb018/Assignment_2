@@ -6,6 +6,7 @@ import reader.*;
 import java.io.FileNotFoundException;
 import java.text.ParseException;
 import java.util.*;
+import writer.*;
 
 public class DataConverter {
 
@@ -15,15 +16,13 @@ public class DataConverter {
 		//Create a FileReader object
 		FlatFileReader ffr = new FlatFileReader();
 		
-		ArrayList arr = new ArrayList();
-		ffr.readInPersons();
+		ArrayList<Product> arrProducts = new ArrayList<Product>();
 		
-		for (int i = 0; i < arr.size(); i++)
-		{
-			System.out.println(arr.get(i).toString());
-		}
+		arrProducts = ffr.readInProducts();
 		
-		ffr.readInProducts();
+		JSONWriter jsonWriter = new JSONWriter();
+		jsonWriter.jsonProductConverter(arrProducts);
+		
 	}
 
 }
